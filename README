@@ -1,0 +1,23 @@
+# Burning Empires Tools #
+
+This library contains a set of tools (or just a pair of them, currently) to assist with the playing of the Burning Empires roleplaying game, by Luke Crane, based on the Iron Empires comics, by Christopher Moeller.
+
+I started writing them ca. 2004, as a way to simultaneously learn Python, git and TDD, and to explore the intricacies of what is still one of my favorite roleplaying games.  They helped with all those things.
+
+## What it is ##
+
+In Burning Empires, characters are made by adding "Lifepaths", which plot out the character's past, give them certain obligatory skills and traits, as well as points used to buy further skills and traits of the player's choice.  When working with pen and paper, there's enough math involved to require you to work in phases: _first_ choose lifepaths, _then_ determine stats, _then_ spend skills, etc., etc.  By contrast, BET tries to intelligently re-arrange your character when any aspect of them changes.  (The full advantage of this will not be realized until it has a working GUI, but I'm already proud of it, so there.)
+
+The BET character burner has all lifepaths of the Human Setting working properly except for Owner Aboard (which requires the character to have purchased a spaceship, and there is no support for equipment yet), Mule (which requires "the approval of the gaming group") and Filthy Worm Lover (which requires "One previous professional or mid-tier lifepath", which is annoyingly vague).  It does not yet support any of the Kerrn, Mukhadish or Vaylen Settings.
+
+The game also obliges you to create, as a group, the world that your adventures take place on, and creating a matrix of Disposition values based on your choices.  
+
+The BET world burner is more or less feature-complete, and hopefully even moderately self-explanatory (assuming you have a Burning Empires book).  Just run `python world/world_tkinter.py` and see for yourself.
+
+## What it should be ##
+
+A full-service framework that complements the game text without reproducing or replacing it.  More specifically:
+
++ An Equipment creator
++ A tracker for Firefight and Duel of Wits conflicts
++ A tracker and journal for Infection phases
